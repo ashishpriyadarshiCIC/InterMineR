@@ -14,9 +14,18 @@ To install this package, start R and enter:
 
 `## try http:// if https:// URLs are not supported`
 
-`source("https://bioconductor.org/biocLite.R")`
+`if (!requireNamespace("BiocManager", quietly=TRUE))`
+    `install.packages("BiocManager")`
 
-`biocLite("InterMineR")`
+`BiocManager::install("InterMineR")`
+
+In case installation for RCurl fails showing the error`installation of package ‘RCurl’ had non-zero exit status`, install libxml2-dev, libcurl4-openssl-dev and aptitude on you system using the following commands :
+ 
+ `sudo apt-get install aptitude`
+
+ `sudo apt-get install libcurl4-openssl-dev`
+
+ `sudo apt-get install libxml2-dev`
 
 ## Usage
 
